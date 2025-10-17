@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="fr">
+   <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Fichier INDEX </title>
+	 <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+        .video-container {
+            margin-bottom: 30px;
+            max-width: 600px; /* Limite la largeur du conteneur de vidéo */
+            margin-left: auto;
+            margin-right: auto;
+        }
+        video {
+            width: 100%;
+            height: auto;
+            border: 2px solid #333;
+        }
+        .prompt-text {
+            margin-bottom: 20px;
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+        .code-button {
+            padding: 10px 20px;
+            font-size: 1em;
+            cursor: pointer;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .code-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+   </head>
+   <body>
+		<div>
+			//<img src="CouleurOrange.jpg" height="80">
+			//<img src="Stitch.png" height="80">
+			//<img src="Croissant.png" height="80">
+		</div>
+		<div class="video-container">
+        <video controls>
+        //    <source src="VideoFinalisee.mp4" type="video/mp4">
+            Votre navigateur ne supporte pas la balise vidéo.
+        </video>
+		<br></br>
+        <div class="prompt-text">
+            Vous avez trouvé le code ?
+		</div>
+
+		<button class="code-button" onclick="demanderCode()">
+			Cliquez-ici
+		</button>
+
+   </body>
+</html>
+ 
+
+    <script>
+        function demanderCode() {
+            // Ouvre une boîte de dialogue de saisie (popup)
+            let codeSaisi = prompt("Veuillez saisir le code chiffré :");
+
+            // Vérifie si l'utilisateur a saisi quelque chose (non nul et non vide)
+            if (codeSaisi !== null && codeSaisi.trim() !== "") {
+                // Vous pouvez ajouter ici la logique pour vérifier le code
+                // Par exemple :
+                if (codeSaisi === "8179") { alert("Code correct !"); }
+                else { alert("Code incorrect. Réessayez."); }
+
+                //alert("Code saisi : " + codeSaisi + "\n(Logique de vérification à implémenter)");
+            } else if (codeSaisi !== null) {
+                alert("Saisie annulée ou vide.");
+            }
+        }
+    </script>
+
+</body>
+</html>
